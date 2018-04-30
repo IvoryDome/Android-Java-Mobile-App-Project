@@ -24,4 +24,8 @@ public class Card {
         return rank.getValue();
     }
 
+    public String getCardToString(){
+        return getRank().toString() + " of " + getSuit().toString();
+    }
+
 }

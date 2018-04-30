@@ -39,5 +39,15 @@ public class Game {
             return "It's a draw!";
         }
     }
+
+    public void dealCardsForBlackjack(){
+        for (int i = 0; i < 2 ; i++) {
+            player1.storeCard(deck.getCard());
+        }
+    }
+
+
+
+
 }
 

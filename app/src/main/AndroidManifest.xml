@@ -16,9 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HigherLowerActivity"
+        <activity
+            android:name=".HigherLowerActivity"
             android:label="@string/high_lower_activity_title"
-            android:parentActivityName=".MainActivity"> ></activity>
+            android:parentActivityName=".MainActivity">
+            >
+        </activity>
+        <activity
+            android:name=".BlackJackActivity"
+            android:label="@string/blackjack_activity_title"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

@@ -34,9 +34,15 @@ import java.util.ArrayList;
             return total;
         }
 
-//        public ArrayList<Card> showCard(){
-//            return hand[0];
-//        }
+        public ArrayList<Card> getHand() {
+            return hand;
+        }
+
+        public String showHandToString(){
+            Card card1 = getHand().get(0);
+            Card card2 = getHand().get(1);
+            return card1.getCardToString() + ", " + card2.getCardToString();
+        }
 
     }
 
