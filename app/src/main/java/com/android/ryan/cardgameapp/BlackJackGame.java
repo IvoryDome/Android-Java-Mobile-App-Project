@@ -22,13 +22,12 @@ public class BlackJackGame {
     }
 
     public String playBlackJack(){
-        int total = 0;
         String showTotal = null;
-        if (total <= 21){
-            showTotal = "Your current total: " + total;
+        if (player.totalValue() <= 21){
+            showTotal = "Your current total: " + player.totalValue();
         }
         else{
-            showTotal = "Your current total: " + total + ", you have busted!";}
+            showTotal = "Your current total: " + player.totalValue() + ", you have busted!";}
         return showTotal;
     }
 }

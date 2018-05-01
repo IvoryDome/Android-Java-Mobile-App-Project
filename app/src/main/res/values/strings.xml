@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Card Game App</string>
     <string name="high_lower_activity_title">Higher or Lower</string>
-    <string name="high_lower_instructions">You and your opponent are dealt a random card, the player with the highest card wins.</string>
+    <string name="high_lower_instructions">You and your opponent are dealt two cards, the values of these cards are added together and the player with the highest card wins.</string>
     <string name="blackjack_activity_title">BlackJack</string>
     <string name="blackjack_instructions">You start with 2 cards, the aim is to get as close to a total of 21 when adding all of your cards together, if you go over 21 you lose</string>
+    <string name="play_again_button">Play again</string>
 </resources>
