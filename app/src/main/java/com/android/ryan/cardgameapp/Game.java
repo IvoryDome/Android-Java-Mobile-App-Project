@@ -1,5 +1,7 @@
 package com.android.ryan.cardgameapp;
 
+import android.graphics.Color;
+
 import java.util.ArrayList;
 
 public class Game {
@@ -18,7 +20,7 @@ public class Game {
         deck = new Deck();
     }
 
-    public void dealCards(){
+    public void dealCardsForHigherLower(){
         for (int i = 0; i < 2 ; i++) {
             player1.storeCard(deck.getCard());
         }
@@ -28,23 +30,21 @@ public class Game {
 
     }
 
-    public String determineWinner(){
+    public String determineWinnerHL(){
         if(player1.totalValue() > player2.totalValue()){
             return "You have won!";
         }
         else if(player1.totalValue() < player2.totalValue()){
+            int color = Color.parseColor("#06990f");
             return "The computer wins!";
         }
         else {
+            int color = Color.parseColor("#0217ff");
             return "It's a draw!";
         }
     }
 
-    public void dealCardsForBlackjack(){
-        for (int i = 0; i < 2 ; i++) {
-            player1.storeCard(deck.getCard());
-        }
-    }
+
 
 
 
