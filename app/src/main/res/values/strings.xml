@@ -5,4 +5,6 @@
     <string name="blackjack_activity_title">BlackJack</string>
     <string name="blackjack_instructions">You start with 2 cards, the aim is to get as close to a total of 21 when adding all of your cards together, if you go over 21 you lose</string>
     <string name="play_again_button">Play again</string>
+    <string name="computersCardsString">Computer\'s cards</string>
+    <string name="yourCardsString">Your cards</string>
 </resources>

@@ -44,5 +44,15 @@ import java.util.ArrayList;
             return card1.getCardToString() + ", " + card2.getCardToString();
         }
 
+        public String showCard1ToString(){
+            Card card = getHand().get(0);
+            return card.getCardToString();
+        }
+
+        public String showCard2ToString(){
+            Card card = getHand().get(1);
+            return card.getCardToString();
+        }
+
     }
 

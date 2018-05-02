@@ -8,7 +8,6 @@ public class Card {
     public Card(SuitType suit, RankType rank) {
         this.suit = suit;
         this.rank = rank;
-
     }
 
 
