@@ -34,6 +34,16 @@ import java.util.ArrayList;
             return total;
         }
 
+        public int totalBlackjackValue(){
+            int total = 0;
+
+            for (Card card:hand) {
+                total += card.getBlackjackValue();
+            }
+
+            return total;
+        }
+
         public ArrayList<Card> getHand() {
             return hand;
         }
@@ -44,15 +54,11 @@ import java.util.ArrayList;
             return card1.getCardToString() + ", " + card2.getCardToString();
         }
 
-        public String showCard1ToString(){
-            Card card = getHand().get(0);
+        public String showCardToString(int num){
+            Card card = getHand().get(num);
             return card.getCardToString();
         }
 
-        public String showCard2ToString(){
-            Card card = getHand().get(1);
-            return card.getCardToString();
-        }
 
     }
 

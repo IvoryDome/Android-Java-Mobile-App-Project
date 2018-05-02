@@ -1,14 +1,22 @@
 package com.android.ryan.cardgameapp;
 
+import android.graphics.Color;
+
 public class BlackJackGame {
 
 
     Player player;
     Deck deck;
+    boolean gameFinished;
 
     public BlackJackGame(Player player, Deck deck) {
         this.player = player;
         this.deck = deck;
+        gameFinished = false;
+    }
+
+    public void createDeck(){
+        deck = new Deck();
     }
 
     public void dealStartCardsForBlackjack() {
@@ -18,28 +26,31 @@ public class BlackJackGame {
     }
 
     public void dealCard() {
-        player.storeCard(deck.getCard());
+        if (player.totalBlackjackValue() <= 21 && !gameFinished) {
+            player.storeCard(deck.getCard());
+        }
+    }
+
+    public void finishGame(){
+        gameFinished = true;
     }
 
     public String playBlackJack() {
         String showTotal;
-        if (player.totalValue() <= 21) {
-            showTotal = "Your current total: " + player.totalValue();
-        } else {
-            showTotal = "Your current total: " + player.totalValue() + ", you have busted!";
+        if (player.totalBlackjackValue() <= 21 && !gameFinished) {
+            showTotal = "Your current score: " + player.totalBlackjackValue();
+        }
+        else if(player.totalBlackjackValue() > 21){
+            finishGame();
+            showTotal = "Your current score: " + player.totalBlackjackValue() + ", you have busted!";
+        }
+        else{
+            showTotal = "Your final score is " + player.totalBlackjackValue();
         }
         return showTotal;
+
     }
 
 
-    public String finishGame() {
-        String showTotal;
-        if (player.totalValue() > 18) {
-            showTotal = "Your final total is " + player.totalValue() + "well done!";
-        } else {
-            showTotal = "Your final total is " + player.totalValue();
-        }
-        return showTotal;
-    }
 }
 

@@ -23,6 +23,10 @@ public class Card {
         return rank.getValue();
     }
 
+    public int getBlackjackValue(){
+        return rank.getBlackjackValue();
+    }
+
     public String getCardToString(){
         return getRank().toString() + " of " + getSuit().toString();
     }
