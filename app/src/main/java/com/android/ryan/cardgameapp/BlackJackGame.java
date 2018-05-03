@@ -37,8 +37,12 @@ public class BlackJackGame {
 
     public String playBlackJack() {
         String showTotal;
-        if (player.totalBlackjackValue() <= 21 && !gameFinished) {
+        if (player.totalBlackjackValue() < 21 && !gameFinished) {
             showTotal = "Your current score: " + player.totalBlackjackValue();
+        }
+        else if(player.totalBlackjackValue() == 21){
+            showTotal = "Congratulations, you scored 21!";
+            finishGame();
         }
         else if(player.totalBlackjackValue() > 21){
             finishGame();

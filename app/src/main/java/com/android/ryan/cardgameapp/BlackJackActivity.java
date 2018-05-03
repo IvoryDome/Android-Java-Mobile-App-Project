@@ -75,14 +75,16 @@ public class BlackJackActivity extends AppCompatActivity {
         }
         else if(currentCard == 3){
             String playerCard4 = player.showCardToString(3);
-            cardImageShower.assignCardImage(playerCard4, card3ImageViewID);
+            cardImageShower.assignCardImage(playerCard4, card4ImageViewID);
         }
         else if(currentCard == 4){
             String playerCard5 = player.showCardToString(4);
             cardImageShower.assignCardImage(playerCard5, card5ImageViewID);
+            card5ImageViewID.setVisibility(View.VISIBLE);
         }        if(currentCard == 5){
             String playerCard6 = player.showCardToString(5);
             cardImageShower.assignCardImage(playerCard6, card6ImageViewID);
+            card6ImageViewID.setVisibility(View.VISIBLE);
         }
         if (player.totalBlackjackValue() > 21) {
             int color = Color.parseColor("#ff0000");
